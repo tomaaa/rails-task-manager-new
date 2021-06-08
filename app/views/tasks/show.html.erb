@@ -1,0 +1,11 @@
+<h1>TASK</h1>
+
+<p><%= @tasks.details %></p>
+<p><%= link_to 'back to list!', tasks_path %></p>
+<%= link_to "Edit task",  task_edit_path,
+      class:"btn btn-outline-success" %>
+<%= link_to "DELETE #{@tasks.title}",
+      task_path(@tasks),
+      method: :delete,
+      data: { confirm: "Are you sure ?"},
+      class:"btn btn-outline-danger" %>
